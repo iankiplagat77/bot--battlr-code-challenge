@@ -1,7 +1,7 @@
 import React from "react";
-import YourBotArmy from "./YourBotArmy";
+import BotArmy from "./BotArmy";
 import BotCollection from "./BotCollection";
-import BotSpecs from "../components/BotSpecs";
+import BotSpecs from "./BotSpecs";
 
 class BotsPage extends React.Component {
   constructor() {
@@ -21,7 +21,7 @@ class BotsPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://bot-battler-api.herokuapp.com/api/v1/bots')
+    fetch('http://localhost:3000/bots')
     .then(resp => resp.json())
     .then(data => this.setState({ bots: data }))
   }
@@ -54,7 +54,7 @@ class BotsPage extends React.Component {
 
     return (
       <div>
-        <YourBotArmy myBots={myBots} />
+        <BotArmy myBots={myBots} />
         {renderCollection ?
         <BotCollection bots={bots} renderCollection={renderCollection} renderSpecs={this.renderSpecs} handleClick={this.handleClick} />
         :

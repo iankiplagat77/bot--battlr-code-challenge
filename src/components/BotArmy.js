@@ -1,5 +1,5 @@
 import React from "react";
-import BotCard from "../components/BotCard";
+import BotCard from "./BotCard";
 
 const BotArmy = props => {
   //bot army code here...
