@@ -21,7 +21,7 @@ class BotsPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/bots')
+    fetch('https://bot-battler-hen2.onrender.com/bots')
     .then(resp => resp.json())
     .then(data => this.setState({ bots: data }))
   }
